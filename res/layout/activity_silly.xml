@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/uglyRed"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/sillyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="46dp"
+        android:text="@string/songStuff"
+        android:textColor="@color/uglyGreen" />
+
+    <Button
+        android:id="@+id/firstButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/sillyTextView"
+        android:layout_below="@+id/sillyTextView"
+        android:layout_marginTop="118dp"
+        android:text="@string/funText" />
+
+</RelativeLayout>
