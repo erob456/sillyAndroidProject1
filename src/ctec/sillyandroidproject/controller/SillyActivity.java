@@ -1,6 +1,8 @@
 package ctec.sillyandroidproject.controller;
 
 import java.util.ArrayList;
+import java.util.Random;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,6 +17,7 @@ public class SillyActivity extends Activity
 	private Button appButton;
 	private TextView appText;
 	private RelativeLayout appLayout;
+	private Random randomColor;
 	private ArrayList<Integer> colorList;
 
 	@Override
@@ -27,7 +30,7 @@ public class SillyActivity extends Activity
 		appButton = (Button) findViewById(R.id.firstButton);
 		appText = (TextView) findViewById(R.id.sillyTextView);
 		appLayout = (RelativeLayout) findViewById(R.id.appLayout);
-		
+		randomColor = new Random();
 		colorList = new ArrayList<Integer>();
 		
 		fillTheColorList();
@@ -49,7 +52,8 @@ public class SillyActivity extends Activity
 			@Override
 			public void onClick(View v)
 			{
-					appLayout.setBackgroundResource(R.color.white);
+					appLayout.setBackgroundResource(colorList.get(randomColor.nextInt(colorList.size()-1)));
+					appText.setTextColor(getResources().getColor(colorList.get(randomColor.nextInt(colorList.size()-1))));
 			}
 		});
 	}
