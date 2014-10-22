@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 public class SillyActivity extends Activity
 {
+	private Button textButton;
 	private Button appButton;
 	private TextView appText;
 	private RelativeLayout appLayout;
@@ -27,6 +28,7 @@ public class SillyActivity extends Activity
 		setContentView(R.layout.activity_silly);
 		
 		//Gives you access to a button or any View object
+		textButton = (Button) findViewById(R.id.textButton);
 		appButton = (Button) findViewById(R.id.firstButton);
 		appText = (TextView) findViewById(R.id.sillyTextView);
 		appLayout = (RelativeLayout) findViewById(R.id.appLayout);
@@ -54,6 +56,14 @@ public class SillyActivity extends Activity
 			{
 					appLayout.setBackgroundResource(colorList.get(randomColor.nextInt(colorList.size()-1)));
 					appText.setTextColor(getResources().getColor(colorList.get(randomColor.nextInt(colorList.size()-1))));
+			}
+		});
+		
+		textButton.setOnClickListener(new View.OnClickListener()
+		{
+			public void onClick(View v)
+			{
+				appText.setTextColor(getResources().getColor(colorList.get(randomColor.nextInt(colorList.size()-1))));
 			}
 		});
 	}

@@ -26,4 +26,14 @@
         android:layout_marginTop="118dp"
         android:text="@string/funText" />
 
+    <Button
+        android:id="@+id/textButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/firstButton"
+        android:layout_alignBottom="@+id/firstButton"
+        android:layout_marginLeft="36dp"
+        android:layout_toRightOf="@+id/firstButton"
+        android:text="@string/textButton" />
+
 </RelativeLayout>

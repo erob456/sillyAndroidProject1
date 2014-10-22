@@ -1133,6 +1133,7 @@ containing a value of this type.
         public static final int split_action_bar=0x7f05001e;
         public static final int submit_area=0x7f050039;
         public static final int tabMode=0x7f050002;
+        public static final int textButton=0x7f05003f;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
         public static final int up=0x7f050021;
@@ -1238,6 +1239,7 @@ containing a value of this type.
         public static final int labelText=0x7f0a000e;
         public static final int sacrasmText=0x7f0a0010;
         public static final int songStuff=0x7f0a0011;
+        public static final int textButton=0x7f0a0012;
     }
     public static final class style {
         /** 
